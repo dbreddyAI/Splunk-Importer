@@ -102,8 +102,7 @@ flag: acsc2017{FrameByFrame}
 name: broken_rsa
 category: Cryptography
 value: 90
-description: |
-  Exploit broken RSA implementation.
+description: Exploit broken RSA implementation.
   This is a test multiline description
   Testing with a blank line.
 flag: acsc2017{LooseLipsSinkShips}
@@ -135,8 +134,7 @@ flag: acsc2017{mg8gj7GnONlolhIrwN2p}
 name: cyber_haiku
 category: Pwnable
 value: 60
-description: |
-  Exploit the program.
+description: Exploit the program.
   nc challenge.acsc17.us 5000
 flag: acsc2017{user_input_is_evil}
 start_time: 1503
@@ -153,8 +151,7 @@ flag: acsc2017{UseSSHDummy}
 name: forgot_to_patch
 category: Web Exploitation
 value: 55
-description: |
-  You know that the flag is located at www.fake-wordpress-site.us/flag.txt...
+description: You know that the flag is located at www.fake-wordpress-site.us/flag.txt...
   Now just get the answer.
 flag: acsc2017{UpdateYourPlugins}
 bonus_instructions: This has a points value.
@@ -163,8 +160,7 @@ bonus_points: 10
 name: helloworld_c
 category: Pwnable
 value: 40
-description: |
-  Exploit the program.
+description: Exploit the program.
   ssh -p 2222 helloworld-c@challenge.acsc17.us
   Password: helloworld
 flag: acsc2017{setuid_and_call_system_what_could_possibly_go_wrong}
@@ -173,8 +169,7 @@ bonus_instructions: This has no value.
 name: helloworld_c2
 category: Pwnable
 value: 50
-description: |
-  Exploit the program
+description: Exploit the program
   ssh -p 2222 helloworld-c2@challenge.acsc17.us
   Password: helloworld
 flag: acsc2017{bad_sanitization_is_bad_and_should_feel_bad}
