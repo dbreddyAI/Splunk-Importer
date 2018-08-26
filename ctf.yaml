@@ -1,0 +1,92 @@
+name: QR Part Deux
+category: Forensics
+value: 80
+description: Yet another QR code challenge
+files:
+  - QRPartDeux/QRPartDeux.zip
+flag: acsc2017{a_little_like_last_year_is_ok}
+hints:
+  - id: 1
+    hint: dotcode, codablock F, Scanner, CortexScan test
+    cost: 60
+---
+name: animate_me
+category: Forensics
+value: 40
+description: Tear apart the GIF file and find the flag
+flag: acsc2017{FrameByFrame}
+---
+name: broken_rsa
+category: Cryptography
+value: 90
+description: Exploit broken RSA implementation.
+  This is a test multiline description
+  Testing with a blank line.
+flag: acsc2017{LooseLipsSinkShips}
+hints:
+  - id: 1
+    hint: Are all the fields of the public key meant to be public?
+    cost: 25
+  - id: 2
+    hint: Look for where d is calculated (gen_keypair) for how to calculate it.
+    cost: 25
+  - id: 3
+    hint: |
+      If the known modules n is the result of a known prime multiplied with
+      an unknown prime, how can you figure out the unknown prime?
+    cost: 25
+---
+name: checker1
+category: Reverse Engineering
+value: 100
+description: Reverse the binary
+flag: acsc2017{arent_interpreters_great?}
+---
+name: checker2
+category: Reverse Engineering
+value: 150
+description: Reverse the binary
+flag: acsc2017{mg8gj7GnONlolhIrwN2p}
+---
+name: cyber_haiku
+category: Pwnable
+value: 60
+description: Exploit the program.
+  nc challenge.acsc17.us 5000
+flag: acsc2017{user_input_is_evil}
+start_time: 1503
+end_time: 42323
+---
+name: find_the_flag
+category: Forensics
+value: 30
+description: Find the flag the in the telnet session
+files:
+  - find_the_flag/find_the_flag.pcap
+flag: acsc2017{UseSSHDummy}
+---
+name: forgot_to_patch
+category: Web Exploitation
+value: 55
+description: You know that the flag is located at www.fake-wordpress-site.us/flag.txt...
+  Now just get the answer.
+flag: acsc2017{UpdateYourPlugins}
+bonus_instructions: This has a points value.
+bonus_points: 10
+---
+name: helloworld_c
+category: Pwnable
+value: 40
+description: Exploit the program.
+  ssh -p 2222 helloworld-c@challenge.acsc17.us
+  Password is helloworld
+flag: acsc2017{setuid_and_call_system_what_could_possibly_go_wrong}
+bonus_instructions: This has no value.
+---
+name: helloworld_c2
+category: Pwnable
+value: 50
+description: Exploit the program
+  ssh -p 2222 helloworld-c2@challenge.acsc17.us
+  Password is helloworld
+flag: acsc2017{bad_sanitization_is_bad_and_should_feel_bad}
