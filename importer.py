@@ -48,6 +48,11 @@ def validate_yaml(chal):
     chal['flag'] = chal['flag'].strip()
 
     # Handle optional paramaters
+    if 'links' not in chal:
+        chal['links'] = ''
+    else:
+        chal['links'] = chal['links'].strip()
+
     if 'hints' not in chal:
         chal['hints'] = []
 
@@ -84,7 +89,7 @@ def import_challenges(src_file, dest_dir, exit_on_error):
                     questions_writer = csv.writer(out_questions, delimiter=',')
 
                     #Generate file headers
-                    data = [['Number','Title', 'Category', 'Question', 'BasePoints', 'StartTime','EndTime', 'AdditionalBonusInstructions', 'AdditionalBonusPoints']]
+                    data = [['Number','Title', 'Category', 'Question', 'Link', 'BasePoints', 'StartTime','EndTime', 'AdditionalBonusInstructions', 'AdditionalBonusPoints']]
                     questions_writer.writerows(data)
                     data = [['HintNumber', 'Number', 'Hint', 'HintCost']]
                     hints_writer.writerows(data)
@@ -101,7 +106,7 @@ def import_challenges(src_file, dest_dir, exit_on_error):
                             print "Skipping challenge: " + str(err)
                             continue
                         # Insert Question Record
-                        data = [[i, chal['name'], chal['category'], chal['description'], chal['value'], chal['start_time'], chal['end_time'], chal['bonus_instructions'], chal['bonus_points']]]
+                        data = [[i, chal['name'], chal['category'], chal['description'], chal['links'], chal['value'], chal['start_time'], chal['end_time'], chal['bonus_instructions'], chal['bonus_points']]]
                         questions_writer.writerows(data)
                         # Insert Answer Record
                         data = [[chal['flag'], i]]
